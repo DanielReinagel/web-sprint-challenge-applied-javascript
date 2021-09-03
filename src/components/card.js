@@ -58,6 +58,7 @@ const cardAppender = (selector) => {
       const r = resp.data['articles'];
       Object.keys(r).forEach(key => r[key].forEach(obj => document.querySelector(selector).appendChild(Card(obj))));
     })
+    .catch(err => console.log(err));
 }
 
 export { Card, cardAppender }
